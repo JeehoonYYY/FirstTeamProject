@@ -1,0 +1,29 @@
+package lambda;
+
+@FunctionalInterface
+interface PrintString{
+	void showString(String str);
+}
+
+
+public class TestLambda {
+
+	public static void main(String[] args) {
+		// 매개변수로 전달하는 람다식
+		PrintString lambdaStr = s -> System.out.println(s);
+		
+//		PrintString lambdaStr_ = new PrintString() {
+//			@Override
+//			public void showString(String str) {
+//				System.out.println(str);
+//			}
+//		};
+		showMyString(lambdaStr);
+		
+		
+	}
+
+	public static void showMyString(PrintString p) {
+		p.showString("Hello lambda parameter");
+	}
+}

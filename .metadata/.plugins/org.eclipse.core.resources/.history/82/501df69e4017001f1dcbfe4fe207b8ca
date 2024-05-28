@@ -1,0 +1,43 @@
+package collection.arraylist;
+
+import java.util.ArrayList;
+
+import collection.Member;
+
+public class MemberArrayList {
+	// ArrayList 활용하기
+	// 멤버변수
+	private ArrayList<Member> arrayList;	// 선언
+	
+	public MemberArrayList() {
+		arrayList = new ArrayList<Member>();
+	}
+	
+	// 회원 추가
+	public void addMember(Member member) {
+		arrayList.add(member);
+	}
+	
+	// 회원 삭제
+	public boolean removeMember(int memberId) {
+		for(int i=0; i<arrayList.size(); i++) {
+			Member member = arrayList.get(i);
+			int tempId = member.getMemberId();
+			if(tempId == memberId) {
+				arrayList.remove(i);
+				return true;
+			}
+		}
+		
+		
+		System.out.println(memberId + "아이디가 존재하지 않습니다.");
+		return false;
+	}
+	
+	public void showAllMember() {
+		for(Member member : arrayList) {
+			System.out.println(member);
+		}
+		System.out.println();
+	}
+}

@@ -1,0 +1,10 @@
+package classex;
+
+public class StringClassTest {
+
+	public static void main(String[] args) {
+		// 
+
+	}
+
+}

@@ -1,0 +1,31 @@
+package exercise;
+
+public class Student {
+	String id;
+	String name;
+	
+	// 생성자
+	public Student(String id, String name) {
+		this.id = id;
+		this.name = name;
+	}
+	// equals, hashCode 재정의
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof Student) {
+			Student set = (Student)obj;
+			return(this.id == set.id);
+		}
+		return false;
+	}
+	@Override
+	public int hashCode() {
+		
+		return Integer.parseInt(id);
+	}
+
+	@Override
+	public String toString() {
+		return id + ":" + name;
+	}
+}

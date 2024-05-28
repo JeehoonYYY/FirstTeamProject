@@ -1,0 +1,10 @@
+package classex;
+
+public class NewInstanceTest {
+
+	public static void main(String[] args) {
+		// 
+
+	}
+
+}
